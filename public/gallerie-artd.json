@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Ange Djomo",
+    "role": "Chef de projet et UX/UI Designer",
+    "description": "Ange Djomo est la chef de projet qui veille à ce que l'équipe respecte tous les délais et maintienne la qualité du projet. Avec plus de 10 ans d'expérience en gestion de projet, elle apporte une richesse de connaissances et d'expertise à l'équipe.",
+    "imageUrl": "/Ange.webp"
+  },
+  {
+    "name": "Koffi Yann Jose Kossonou",
+    "role": "Développeur",
+    "description": "Koffi Yann Jose Kossonou est le développeur principal responsable des fonctionnalités de base du site. Sa passion pour le codage et la résolution de problèmes garantit que le site est à la fois robuste et convivial.",
+    "imageUrl": "/Koffi.webp"
+  },
+  {
+    "name": "Elhadj Mamadou Oury Barry",
+    "role": "UX/UI Designer",
+    "description": "Elhadj Mamadou Oury Barry conçoit les interfaces utilisateur et améliore l'expérience utilisateur. Sa vision créative garantit que le site est non seulement fonctionnel mais aussi esthétiquement plaisant.",
+    "imageUrl": "/carol.webp"
+  },
+  {
+    "name": "Akpa Akpess Jesus Victor Coffi",
+    "role": "Stratège de contenu",
+    "description": "Akpa Akpess Jesus Victor Coffi est en charge de la stratégie de contenu et veille à ce que toutes les informations sur le site soient claires, concises et engageantes. Son expérience en communication aide à élaborer le message parfait.",
+    "imageUrl": "/Coffi.webp"
+  }
+  
+]

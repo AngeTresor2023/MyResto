@@ -1,0 +1,40 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.home {
+  height: 100vh;
+  background-image: url('/image.png');
+  background-size: cover;
+  background-position: center;
+  padding: 0 50px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.home h1 {
+  font-family: Montserrat, sans-serif;
+  text-transform: uppercase;
+  color: #FAF5E9;
+  font-weight: 900;
+  font-size: clamp(25px, 5vw, 110px);
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  font-size: clamp(20px, 4vw, 80px);
+  color: #FAF5E9;
+  font-weight: 900;
+  letter-spacing: -1px;
+}
+
+.weareSection {
+  background-color: #f9f9f9;
+  padding: 40px 20px;
+}

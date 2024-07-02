@@ -1,0 +1,65 @@
+:root {
+  --hue-color: 102;
+  --first-color-light:#fff;
+  --second-color-ligth:#333;
+  --second-color-dark:#0e926a ;
+  --first-color-dark: hsl(var(--hue-color), 55%, 6%);
+  --big-font-size: 2rem;
+  --font-bold: 800;
+  --mb-1: 1rem;
+  --z-fixed: 1000;
+  --text1:#0e926a;
+  --text2:#333;
+  
+}
+
+@media screen and (min-width: 968px) {
+:root {
+  --big-font-size: 3rem;
+}
+}
+
+
+body.light {
+  --first-color: var(--first-color-light);
+  --second-color: var(--second-color-light);
+  background-color: var(--first-color);
+  color: var(--second-color);
+  --text:var(--text2);
+}
+
+body.dark {
+  --first-color: var(--first-color-dark);
+  --second-color: var(--second-color-dark);
+  background-color: var(--first-color);
+  color: var(--second-color);
+  --text:var(--text1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/*
+:root {
+  --first-color-light: #fff;
+  --second-color-light: #333;
+  --first-color-dark: #333;
+  --second-color-dark: #fff;
+}
+
+body.light {
+  --first-color: var(--first-color-light);
+  --second-color: var(--second-color-light);
+  background-color: var(--first-color);
+  color: var(--second-color);
+}
+
+body.dark {
+  --first-color: var(--first-color-dark);
+  --second-color: var(--second-color-dark);
+  background-color: var(--first-color);
+  color: var(--second-color);
+}
+*/
