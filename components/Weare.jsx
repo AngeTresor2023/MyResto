@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import styles from './WeAre.module.css';
+import styles from './Weare.module.css';
 import '@/public/Ange.webp'
 
 export default function Weare({ imas }) {
