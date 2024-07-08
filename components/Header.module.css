@@ -32,7 +32,7 @@
 }
 
 .navlinks a:hover {
-  color: #fefdd7;
+  color: #b61593;
 }
 
 .navlinks .active {
@@ -64,7 +64,7 @@
   position: absolute;
   right: 0;
   top: 100%;
-  background-color: var(--first-color);
+  background-color: var(--first-color-);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 4px;
   overflow: hidden;
@@ -139,4 +139,16 @@
   font-size: 1.5rem;
   margin-left: 10px;
   outline: none;
+}
+
+.dark{
+ 
+  background-color: var(--first-color-dark);
+  color: white;
+  
+}
+.light{
+  
+  background-color: #f7efef;
+  
 }

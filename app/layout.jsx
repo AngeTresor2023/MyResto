@@ -35,13 +35,14 @@ return (
 }*/
 // layout.jsx
 'use client';
-import React, { createContext, useState, useEffect } from 'react';
+import React, { createContext, useState, useContext } from 'react';
 import Header from '@/components/Header';
 import { Karla } from 'next/font/google';
 import Footer from '@/components/Footer';
 import './globals.css';
 import styles from './layout.module.css';
-
+import { ThemeProvider } from '@/components/ThemeProvider';
+import {LocaleProvider} from '@/components/LocaleProvider';
 export const ThemeContext = createContext(null);
 
 const karla = Karla({ subsets: ['latin'] });
@@ -49,24 +50,21 @@ const karla = Karla({ subsets: ['latin'] });
 export default function RootLayout({ children }) {
   const [theme, setTheme] = useState("light");
 
-  const toggleTheme = () => {
-    setTheme((curr) => (curr === "light" ? "dark" : "light"));
-  };
-
-  useEffect(() => {
-    document.body.className = theme;
-  }, [theme]);
 
   return (
     <html lang='fr'>
       <body className={`${karla.className} ${styles.body}`}>
-        <ThemeContext.Provider value={{ theme, toggleTheme }}>
+        <LocaleProvider>
+
+        
+        <ThemeProvider>
           <Header />
           <main className={styles.main}>
             {children}
           </main>
           <Footer />
-        </ThemeContext.Provider>
+        </ThemeProvider>
+        </LocaleProvider>
       </body>
     </html>
   );
