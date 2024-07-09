@@ -1,4 +1,5 @@
-'use client'
+'use client';
+
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
@@ -7,10 +8,8 @@ import styles from './Header.module.css';
 import Link from 'next/link';
 import { FaSun, FaMoon, FaGlobe, FaCog } from 'react-icons/fa';
 import { useTheme } from './ThemeProvider';
-import {FormattedMessage} from 'react-intl'
+import { FormattedMessage } from 'react-intl';
 import { useLocale } from './LocaleProvider';
-
-
 
 export default function Header() {
 
@@ -23,38 +22,32 @@ export default function Header() {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
 
-  /*traduction */
+  /* traduction */
   const [locale, setLocale] = useLocale();
   const handleLocale = () => {
-      if (locale === 'fr') {
-          setLocale('en');
-      }
-      else {
-          setLocale('fr');
-      }
+    if (locale === 'fr') {
+      setLocale('en');
+    } else {
+      setLocale('fr');
+    }
   }
 
-
   /* pour le theme builder */
-
   const [theme, setTheme] = useTheme();
-    const handleTheme = () => {
-        if (theme === 'light') {
-            setTheme('dark');
-        }
-        else {
-            setTheme('light');
-        }
+  const handleTheme = () => {
+    if (theme === 'light') {
+      setTheme('dark');
+    } else {
+      setTheme('light');
     }
-
-  /*const { theme, toggleTheme } = useContext(ThemeContext);*/
+  }
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
 
   return (
-    <header className={styles.nav +' '+(theme === 'light'? styles.light : styles.dark)}>
+    <header className={styles.nav + ' ' + (theme === 'light' ? styles.light : styles.dark)}>
       <div className={styles.container}>
         <div className={styles.logolink}>
           <Link href='/'>
@@ -62,22 +55,22 @@ export default function Header() {
           </Link>
         </div>
         <nav className={`${styles.navlinks} ${menuOpen ? styles.open : ''}`}>
-          <Link href='/' id = "home" className={pathname === '/' ? styles.active : ''}>
-          <FormattedMessage id='app.header.menu.lien1'/>
+          <Link href='/' id="home" className={pathname === '/' ? styles.active : ''}>
+            <FormattedMessage id='app.header.menu.lien1' />
           </Link>
-          <Link href='/menu' id = "menu" className={pathname === '/menu' ? styles.active : ''}>
-          <FormattedMessage id='app.header.menu.lien2'/>
+          <Link href='/menu' id="menu" className={pathname === '/menu' ? styles.active : ''}>
+            <FormattedMessage id='app.header.menu.lien2' />
           </Link>
-          <Link href='/contact' id = "contact" className={pathname === '/contact' ? styles.active : ''}>
-          <FormattedMessage id='app.header.menu.lien3'/>
+          <Link href='/contact' id="contact" className={pathname === '/contact' ? styles.active : ''}>
+            <FormattedMessage id='app.header.menu.lien3' />
           </Link>
-          <Link href='/connexion' id = "sign" className={pathname === '/connexion' ? styles.active : ''}>
-          <FormattedMessage id='app.header.menu.lien4'/>
+          <Link href='/connexion' id="sign" className={pathname === '/connexion' ? styles.active : ''}>
+            <FormattedMessage id='app.header.menu.lien4' />
           </Link>
           <div className={styles.settings}>
             <FaCog className={styles.settingsIcon} onClick={toggleDropdown} />
             {dropdownOpen && (
-              <div className={styles.dropdownMenu}>
+              <div className={`${styles.dropdownMenu} ${theme === 'light' ? styles.light : styles.dark}`}>
                 <div className={styles.dropdownItem}>
                   <FaGlobe />
                   <select className={styles.traduc} onChange={handleLocale}>
@@ -109,5 +102,3 @@ export default function Header() {
     </header>
   );
 }
-
-

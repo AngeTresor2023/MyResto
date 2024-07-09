@@ -64,7 +64,7 @@
   position: absolute;
   right: 0;
   top: 100%;
-  background-color: var(--first-color-);
+  background-color: inherit; /* Utiliser la même couleur que la navbar */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 4px;
   overflow: hidden;
@@ -141,14 +141,11 @@
   outline: none;
 }
 
-.dark{
- 
+.dark {
   background-color: var(--first-color-dark);
   color: white;
-  
 }
-.light{
-  
+
+.light {
   background-color: #f7efef;
-  
 }
